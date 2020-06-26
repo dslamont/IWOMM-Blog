@@ -1,0 +1,52 @@
+baseurl = "http://www.e-pict.net/iwomm"
+title = "It Works On My Machine"
+copyright = "Copyright &copy; 2020 - Don Lamont"
+canonifyurls = true
+uglyurls = true
+theme = "hugo-kiera"
+
+paginate = 3
+
+summaryLength = 30
+enableEmoji = true
+pygmentsCodeFences = true
+
+#disqusShortname = "myShortName"
+
+# Note: to disable a social network icon delete or comment out the corresponding line
+[author]
+    name = "Don Lamont"
+    github = "dslamont"
+    #gitlab = "username"
+    #linkedin = "username"
+    #facebook = "username"
+    twitter = "dslamont"
+    #instagram = "username"
+    #stackoverflow = "username"
+    #youtube = "user/username" # or channel/channelname
+
+[params]
+    tagline = "Some tech musings"
+    description = "A blog about tech issues I've encountered"
+    #images = [""] #This is used for opengraph/twitter cards.
+    customCSS = []  #Optional Customised CSS
+    #favicon = ""
+    #utterancesRepo = "username/repository"
+    #utterancesIssueTerm = "pathname"
+    #homepageLength = 10
+    #commentAutoload = true  #This mean reader don't need click, disqus comment autoload
+[permalinks]
+  posts = "/:year/:month/:title/"
+# uncomment to enable the Tags link on the main toolbar
+#  [[menu.main]]
+#    identifier = "tags"
+#    name = "Tags"
+#    url = "/tags"
+#    weight = 1
+
+# uncomment to enable the Categories link on the main toolbar
+#  [[menu.main]]
+#    identifier = "categories"
+#    name = "Categories"
+#    url = "/categories"
+#    weight = 1
