@@ -6,7 +6,7 @@ uglyurls = true
 theme = "hugo-kiera"
 
 paginate = 3
-
+googleAnalytics="UA-5885925-6"
 summaryLength = 30
 enableEmoji = true
 pygmentsOptions = "linenos=5"
