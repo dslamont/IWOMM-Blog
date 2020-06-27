@@ -9,7 +9,9 @@ paginate = 3
 
 summaryLength = 30
 enableEmoji = true
-pygmentsCodeFences = true
+pygmentsOptions = "linenos=5"
+pygmentsCodefences = true
+pygmentsStyle = "vs"
 
 #disqusShortname = "myShortName"
 
