@@ -1,11 +1,10 @@
 +++
-title = "Json Storage - Enum Conversion"
-date = 2020-07-01T11:25:15+01:00
+title = "Json Storage - Enum Serialization"
+date = 2020-07-03T11:25:15+01:00
 images = []
 tags = []
 categories = []
 draft = false
-decription = "Some old nonsense"
 +++
 
 The next Json serialization topic we are going to look at is the serialization of Enums.
@@ -80,9 +79,9 @@ The json file produced this time is
 }
 ```
 
-This shows the serialized <tt>TestEnum</tt> as the <tt>Enum</tt>'s underlying <tt>int</tt> value rather that the label value. In some circumstances, such as editable config files, it would be preferable to have the label value shown in the file. To achieve this we need a converter to serialize the <tt>TestEnum</tt> as the label and read it back in properly. 
+This shows the serialized <tt>TestEnum</tt> created in the file is the <tt>Enum</tt>'s underlying <tt>int</tt> value rather that the label value. In some circumstances, such as editable config files, it would be preferable to have the label value shown in the file. To achieve this we need a converter to serialize the <tt>TestEnum</tt> as the label and read it back in correctly. 
 
-Fortunately the <tt>System.Text.Json</tt> namespace has the built-in <tt>JsonStringEnumConverter</tt> which meets our needs. This converter can be set up in a few ways. The first way is to specify it in the <tt>JsonSerializerOptions</tt>. The code below shows this. Note that we now also need to supply the options when deserializing so the json value will be read in properly.
+Fortunately, the <tt>System.Text.Json</tt> namespace has the built-in <tt>JsonStringEnumConverter</tt> which meets our needs. This converter can be set up in a few ways. The first way is to specify it in the <tt>JsonSerializerOptions</tt>. The code below shows this. Note: we now also need to supply the options when deserializing so the json value will be read in correctly.
 
 ``` csharp {hl_lines=[11,23],linenostart=1}
 static async Task Main(string[] args)
@@ -119,7 +118,7 @@ static async Task Main(string[] args)
     }
 }
 ```
-This produces the following output showing the <tt>TestEnum</tt> in a more human friendly way.
+This produces the following output showing the <tt>TestEnum</tt> in a more human friendly manner.
 
 ``` json {hl_lines=[4],linenostart=1}
 {
@@ -129,7 +128,7 @@ This produces the following output showing the <tt>TestEnum</tt> in a more human
 }
 ```
 
-Instead of explicitly specifying the converter in the options we can register the converter on the <tt>EnumField</tt> property.
+Instead of explicitly specifying the converter in the options we can instead register the converter on the <tt>EnumField</tt> property.
 
 ``` csharp {hl_lines=["5-6"],linenostart=1}
 class StorageExampleClass
@@ -162,7 +161,7 @@ public enum TestEnum
     Three
 }
 ```
-
+Which way you decide to register the converter depends if you want to change the serialization behaviour globally or only in specific circumstances.
 
 The code for this example can be found at 
 
