@@ -62,3 +62,12 @@ The json file produced is
 The full code for this example can be found at [github.com/dslamont/JsonStorageExamples](https://github.com/dslamont/JsonStorageExamples/releases/tag/Part_1) 
 
 
+Other posts in this series:
+
+Part 1 - Basic Example
+
+[Part 2 - Indenting Json]({{< ref "JsonStorage-Part-2.md" >}})
+
+[Part 3 - Enum Serialization]({{< ref "JsonStorage-Part-3.md" >}})
+
+[Part 4 - Custom Basic JsonConverter]({{< ref "JsonStorage-Part-4.md" >}}) 

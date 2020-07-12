@@ -63,3 +63,12 @@ The full code for this example can be found at
 [github.com/dslamont/JsonStorageExamples/releases/tag/Part_2](https://github.com/dslamont/JsonStorageExamples/releases/tag/Part_2) 
 
 
+Other posts in this series:
+
+[Part 1 - Basic Example]({{< ref "JsonStorage-Part-1.md" >}}) 
+
+Part 2 - Indenting Json
+
+[Part 3 - Enum Serialization]({{< ref "JsonStorage-Part-3.md" >}})
+
+[Part 4 - Custom Basic JsonConverter]({{< ref "JsonStorage-Part-4.md" >}}) 

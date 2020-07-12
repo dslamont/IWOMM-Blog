@@ -172,3 +172,7 @@ Other posts in this series:
 [Part 1 - Basic Example]({{< ref "JsonStorage-Part-1.md" >}}) 
 
 [Part 2 - Indenting Json]({{< ref "JsonStorage-Part-2.md" >}}) 
+
+Part 3 - Enum Serialization 
+
+[Part 4 - Custom Basic JsonConverter]({{< ref "JsonStorage-Part-4.md" >}}) 
