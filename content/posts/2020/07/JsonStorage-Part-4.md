@@ -4,7 +4,7 @@ date = 2020-07-12T11:25:15+01:00
 images = []
 tags = []
 categories = []
-draft = true
+draft = false
 +++
 
 The next Json serialization topic we are going to look at is creating a custom JsonConverter. A JsonConverter is used to perform custom Json serialization.
