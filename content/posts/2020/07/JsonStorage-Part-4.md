@@ -138,3 +138,6 @@ Other posts in this series:
 [Part 3 - Enum Serialization]({{< ref "JsonStorage-Part-3.md" >}}) 
 
 Part 4 - Custom Basic JsonConverter
+
+[Part 5 - Serializing Derived Types]({{< ref "JsonStorage-Part-5.md" >}}) 
+

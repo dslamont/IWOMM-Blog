@@ -72,3 +72,5 @@ Part 2 - Indenting Json
 [Part 3 - Enum Serialization]({{< ref "JsonStorage-Part-3.md" >}})
 
 [Part 4 - Custom Basic JsonConverter]({{< ref "JsonStorage-Part-4.md" >}}) 
+
+[Part 5 - Serializing Derived Types]({{< ref "JsonStorage-Part-5.md" >}}) 
