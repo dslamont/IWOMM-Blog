@@ -1,6 +1,6 @@
 +++
 title = "Json Storage - Advanced Serialization of Polymorphic Collections"
-date = 2020-08-29T09:45:15+01:00
+date = 2020-08-30T20:15:15+01:00
 images = []
 tags = []
 categories = []
@@ -308,4 +308,4 @@ Other posts in this series:
 
 [Part 6 - Simple Serialization of Polymorphic Collections]({{< ref "JsonStorage-Part-6.md" >}}) 
 
-Part 7 - Advanced Serialization of Polymorphic Collections"
+Part 7 - Advanced Serialization of Polymorphic Collections

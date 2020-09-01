@@ -310,3 +310,5 @@ Other posts in this series:
 [Part 5 - Serializing Derived Types]({{< ref "JsonStorage-Part-5.md" >}}) 
 
 Part 6 - Simple Serialization of Polymorphic Collections
+
+[Part 7 - Advanced Serialization of Polymorphic Collections]({{< ref "JsonStorage-Part-7.md" >}}) 

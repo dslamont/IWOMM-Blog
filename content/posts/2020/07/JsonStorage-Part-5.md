@@ -104,3 +104,7 @@ Other posts in this series:
 [Part 4 - Custom Basic JsonConverter]({{< ref "JsonStorage-Part-4.md" >}}) 
 
 Part 5 - Serializing Derived Types
+
+[Part 6 - Simple Serialization of Polymorphic Collections]({{< ref "JsonStorage-Part-6.md" >}}) 
+
+[Part 7 - Advanced Serialization of Polymorphic Collections]({{< ref "JsonStorage-Part-7.md" >}}) 
