@@ -37,6 +37,10 @@ pygmentsStyle = "vs"
     #utterancesIssueTerm = "pathname"
     #homepageLength = 10
     #commentAutoload = true  #This mean reader don't need click, disqus comment autoload
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
 [permalinks]
   posts = "/:year/:month/:title/"
 # uncomment to enable the Tags link on the main toolbar
