@@ -1,6 +1,6 @@
 +++
 title = "Object Ids to CSV"
-date = 2022-04-16T11:15:00+01:00
+date = 2022-04-30T14:00:00+01:00
 images = []
 tags = ["solidcode"]
 categories = ["solidcode"]
@@ -17,16 +17,19 @@ I wrote the following code to test whether using ```Linq``` and ```String.Join()
 ``` csharp {linenos=false}
 public class CSVTest
 {
-    private readonly List<TestEntry> entries = new List<TestEntry>();
-
+    private const int TEST_SIZE = 500;
+    private readonly List<TestEntry> entries = new List<TestEntry>(TEST_SIZE);
+    private readonly int[] idsArray = new int[TEST_SIZE];
     public CSVTest()
     {
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < TEST_SIZE; i++)
         {
             TestEntry entry = new TestEntry();
             entry.Id = i;
             entry.Desc = $"Test Entry {i}";
             entries.Add(entry);
+
+            idsArray[i] = i;
         }
     }
 
@@ -56,6 +59,12 @@ public class CSVTest
         return output;
     }
 
+    [Benchmark]
+    public string StringJoinTest()
+    {
+        return String.Join(",", idsArray);
+    }
+
     public class TestEntry
     {
         public int Id { get; set; }
@@ -67,13 +76,16 @@ public class CSVTest
 This produced the following results
 
 ```
+
 |             Method |      Mean |     Error |    StdDev |
 |------------------- |----------:|----------:|----------:|
-|           LoopTest |  5.460 μs | 0.0616 μs | 0.0546 μs |
-| LinqStringJoinTest | 10.438 μs | 0.0899 μs | 0.0797 μs |
-
+|           LoopTest |  5.588 μs | 0.0895 μs | 0.0837 μs |
+| LinqStringJoinTest | 10.407 μs | 0.0819 μs | 0.0726 μs |
+|     StringJoinTest |  9.311 μs | 0.1226 μs | 0.1147 μs |
 ```
 
-It can be seen that using ```Linq``` and ```String.Join()``` was twice as slower. I suspect using ```Linq``` to create the ```array ``` of ids is the slow part. Will I just use loops in the future to create CSV strings. Probably not as ```Linq``` and ```String.Join()```  is a lot more succinct and readable and the time differences aren't too large in the great scheme of things. So unless there is a pressing need for performance then I wouldn't bother hand coding loops.
+It can be seen that using ```String.Join()``` slower than using a loop and ```StringBuilder```. Initially I thought using ```Linq``` would be the bottleneck but it is ```String.Join()``` itself.
 
-This investigation does highlight an important principle. Less lines of code does not necesarily leed to better performnce.
+Will I just use loops in the future to create CSV strings. Probably not as ```Linq``` and ```String.Join()```  is a lot more succinct and readable and the time differences aren't too large in the great scheme of things. So unless there is a pressing need for performance then I wouldn't bother hand coding loops.
+
+This investigation does highlight an important principle. Less lines of code does not necessarily lead to better performance.
